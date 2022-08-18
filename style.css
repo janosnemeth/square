@@ -1,27 +1,37 @@
+body {
+  background:#ccc;
+}
+
 .main {
     display:flex;
-    --s: 100px;  /* size  */
-    --m: 4px;    /* space */
+    --s: 150px;  /* size  */
+    --m: 5px;    /* space */
     --r: calc(var(--s) + 4*var(--m) - 2px);
+    
   }
   
   .container {
-    font-size: 0; /*disable white space between inline block element */
+    font-size: 0px; /*disable white space between inline block element */
   }
   
   .container div {
     width: var(--s);
     margin: var(--m);
     height: var(--s);
-    display: inline-block;
-    font-size:initial;
+    display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: black;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    background: red;
+    background:linear-gradient(45deg,#f03355,#630b12);
     margin-bottom: calc(var(--m) - var(--s)*0.5);
   }
+
   .container div:nth-child(odd) {
-    background:green;
+    background:linear-gradient(45deg,#35640e,#25b09b);
   }
+
   .container::before {
     content: "";
     width: calc(var(--s)/2 + var(--m));
@@ -29,5 +39,19 @@
     height: 140%;
     shape-outside: repeating-linear-gradient(     
                      #0000 0 calc(var(--r) - 3px),      
-                     #000  0 var(--r));
+                     rgb(143, 18, 18)  0 var(--r));
   }
+  
+  .letter{
+    transition: all 0.1s ease-in 0.1s;
+  }
+
+  .letter:hover {
+    transform:  scale(1.1); 
+    box-shadow: 15px 15px 15px 0 grey; 
+    font-weight: bolder;
+    color:red;
+    
+  }
+
+
