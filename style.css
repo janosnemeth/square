@@ -26,6 +26,7 @@ body {
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     background:linear-gradient(45deg,#f03355,#630b12);
     margin-bottom: calc(var(--m) - var(--s)*0.5);
+    
   }
 
   .container div:nth-child(odd) {
@@ -42,16 +43,19 @@ body {
                      rgb(143, 18, 18)  0 var(--r));
   }
   
-  .letter{
+  .letter {
     transition: all 0.1s ease-in 0.1s;
+    
+   
+   
   }
 
   .letter:hover {
     transform:  scale(1.1); 
     box-shadow: 15px 15px 15px 0 grey; 
     font-weight: bolder;
-    color:red;
+    color:black;
+    
     
   }
-
 
